@@ -22,3 +22,142 @@
 body {
   font-family: "Karla", serif;
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: "DM Serif Display", serif;
+}
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: auto;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 8px 24px;
+  font-size: 14px;
+  border: 1px solid var(--light-gray);
+  color: var(--light-gray);
+}
+
+/* Navbar Start */
+
+#navbar {
+  background-color: var(--light-gray); 
+}
+
+#navbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: auto;
+  height: 80px;
+}
+#navbar nav .logo {
+  font-family: "DM Serif Display", serif; 
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--dark-violet);
+  letter-spacing: 1.2px;
+}
+
+#navbar nav ul {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+#navbar nav ul li a {
+  margin-left: 20px;
+  color: var(--dark-grayish-violet);
+  font-weight: 600;
+  font-size: 16px;
+  
+}
+
+#navbar nav ul li:last-child a{
+  padding: 8px 20px;
+  border: 1px solid var(--dark-violet);
+  color: var(--dark-violet);
+}
+/* Navbar End */
+
+/* Home Start */
+#home {
+  height: 70vh;
+  background-color: var(--violet);
+  position: relative;
+}
+
+#home::before  {
+  content: "";
+  position: absolute;
+  top: 22rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/bg-pattern-intro-left-desktop.svg") no-repeat ;
+}
+
+#home::after  {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  /* for test */
+  /* background-color: red; */
+  background: url("./images/bg-pattern-intro-right-desktop.svg") no-repeat ;
+}
+
+/* #home .bg-intro-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+
+} */
+
+#home .home-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 6rem;
+  gap: 3rem;
+  color: #fff;
+}
+
+#home .home-content .line {
+  width: 100px;
+  height: 1px;
+  background-color: var(--light-gray);
+}
+
+#home .home-content h1 {
+  font-size: 75px;
+  margin-top: 3rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+#home .home-content p {
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 20px 0;
+  color: var(--light-gray);
+}
+
+/* Home End */
