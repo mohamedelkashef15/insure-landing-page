@@ -31,6 +31,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 h1, h2, h3 {
   font-family: "DM Serif Display", serif;
 }
@@ -47,6 +52,12 @@ h1, h2, h3 {
   font-size: 14px;
   border: 1px solid var(--light-gray);
   color: var(--light-gray);
+}
+
+.line {
+  width: 140px;
+  height: 1px;
+  background-color: var(--light-gray);
 }
 
 /* Navbar Start */
@@ -140,12 +151,6 @@ h1, h2, h3 {
   color: #fff;
 }
 
-#home .home-content .line {
-  width: 100px;
-  height: 1px;
-  background-color: var(--light-gray);
-}
-
 #home .home-content h1 {
   font-size: 75px;
   margin-top: 3rem;
@@ -155,9 +160,39 @@ h1, h2, h3 {
 
 #home .home-content p {
   line-height: 1.5;
-  font-size: 16px;
   margin: 20px 0;
   color: var(--light-gray);
 }
 
 /* Home End */
+/** How We Work Start */
+#how-we-work {
+  margin-top: 15rem;
+}
+
+#how-we-work h2 {
+  font-size: 65px;
+  font-weight: 400;
+  margin-top: 15px;
+  color: var(--violet);
+}
+
+#how-we-work .line {
+  background-color: var(--dark-grayish-violet);
+}
+
+#how-we-work .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 3rem 0;
+}
+
+#how-we-work .row .item h3{
+  margin: 15px 0;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+
+/** How We Work End */
