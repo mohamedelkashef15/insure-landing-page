@@ -53,6 +53,12 @@ h1, h2{
   font-size: 14px;
   border: 1px solid var(--light-gray);
   color: var(--light-gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: var(--light-gray);
+  color: var(--dark-violet);
 }
 
 .line {
@@ -95,13 +101,24 @@ h1, h2{
   color: var(--dark-grayish-violet);
   font-weight: 600;
   font-size: 16px;
-  
+  transition: all 0.3s ease;
 }
 
-#navbar nav ul li:last-child a{
+#navbar nav ul li a:hover {
+  color: var(--dark-violet);
+}
+
+#navbar nav ul li:last-child a {
   padding: 8px 20px;
   border: 1px solid var(--dark-violet);
   color: var(--dark-violet);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#navbar nav ul li:last-child a:hover {
+  background-color: var(--dark-violet);
+  color: #fff;
 }
 /* Navbar End */
 
@@ -111,7 +128,6 @@ h1, h2{
   background-color: var(--violet);
   position: relative;
 }
-
 
 #home::before  {
   content: "";
@@ -136,8 +152,9 @@ h1, h2{
 }
 
 #home .home-content {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   padding-top: 6rem;
   gap: 3rem;
   color: #fff;
@@ -275,6 +292,21 @@ h1, h2{
 #footer .footer-row .col ul li {
   margin: 15px 0;
   font-weight: 600;
+  
+}
+
+#footer .footer-row .col ul li a {
   color: var(--dark-violet);
 }
+
+#footer .footer-row .col ul li a:hover {
+  text-decoration: underline;
+}
+
 /** Footer End */
+
+/** Responsive Start */
+@media (max-width: 900px) {
+
+}
+/** Responsive End */
