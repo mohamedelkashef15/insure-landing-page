@@ -21,6 +21,7 @@
 
 body {
   font-family: "Karla", serif;
+  font-size: 16px;
 }
 
 ul {
@@ -36,10 +37,6 @@ p {
   line-height: 1.5;
 }
 
-h1, h2{
-  font-family: "DM Serif Display", serif;
-  font-weight: 400;
-}
 /* Utility Classes */
 .container {
   max-width: 1200px;
@@ -74,23 +71,6 @@ h1, h2{
   position: relative; 
 }
 
-.bars {
-  display: none;
-  cursor: pointer;
-  background-color: red;  
-  
-}
-
-.bars img {
-  position: absolute;
-  top: 30%;
-  right: 2rem;
-}
-
-.bars .close {
-  display: none;
-}
-
 #navbar nav {
   display: flex;
   justify-content: space-between;
@@ -110,7 +90,6 @@ h1, h2{
 
 #navbar nav ul {
   display: flex;
-
   justify-content: center;
   align-items: center;
 }
@@ -138,6 +117,15 @@ h1, h2{
   background-color: var(--dark-violet);
   color: #fff;
 }
+
+.humburger  {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  right: 2rem;
+}
+
 /* Navbar End */
 
 /* Home Start */
@@ -182,6 +170,8 @@ h1, h2{
   margin-top: 3rem;
   line-height: 1;
   font-weight: 400;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
 }
 
 #home .home-content p {
@@ -201,6 +191,8 @@ h1, h2{
   font-weight: 400;
   margin-top: 15px;
   color: var(--violet);
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
 }
 
 #how-we-work .line {
@@ -216,6 +208,8 @@ h1, h2{
 
 #how-we-work .row .item h3 {
   margin: 15px 0;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
   font-size: 28px;
   font-weight: 400;
 }
@@ -256,6 +250,8 @@ h1, h2{
 
 #card .row h2 {
   font-size: 45px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
 }
 /** Card End */
 /** Footer Start */
@@ -299,7 +295,7 @@ h1, h2{
   grid-template-columns: repeat(4, 1fr);
 }
 
-#footer .footer-row .col h3 {
+#footer .footer-row .col h2 {
   font-size: 18px;
   color: var(--dark-grayish-violet);
   padding-bottom:1rem ;
@@ -308,7 +304,6 @@ h1, h2{
 #footer .footer-row .col ul li {
   margin: 15px 0;
   font-weight: 600;
-  
 }
 
 #footer .footer-row .col ul li a {
@@ -383,10 +378,58 @@ h1, h2{
 
 /* Mobile Start */
 @media (max-width: 650px) {
-  
-  #navbar nav ul {
+
+  .humburger {
+    display: block;
+  }
+
+  .humburger .bars, .humburger .x-mark  {
     display: none;
   }
+  
+  .humburger .bars.active, .humburger .x-mark.active {
+    display: block;
+  }
+
+  #navbar nav ul {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    justify-content: start;
+    padding-top: 2rem;
+    background-color: var(--violet);
+    flex-direction: column;
+    /* important for image */
+    z-index: 3;
+    transition: opacity 0.5s ease;
+  }
+
+  #navbar nav ul li a {
+    display: inline-block;
+    margin: 15px 0;
+    color: var(--light-gray);
+  }
+
+  #navbar nav ul li:last-child a {
+    border: 1px solid var(--light-gray);
+    color: var(--light-gray);
+  }
+
+  #navbar nav ul li a:hover {
+    color: var(--light-gray);
+  }
+
+  #navbar nav ul.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .bars {
     display: block;
   }
